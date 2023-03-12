@@ -31,26 +31,20 @@ string[] NewArray(string[] array)
         if(k<=3)
             arrLength++;
     }
-    string[] newArray = ArrayStringShort(arrLength,array);
-    return newArray;
-}
-
-string[] ArrayStringShort(int x, string[] arr)
-{
-    string[] array = new string[x];
+    string[] newArray = new string[arrLength];
     int j = 0;
-    for(int i = 0;i<arr.Length;i++)
+    for(int i = 0;i<array.Length;i++)
     {
         int k = 0;
-        foreach(char c in arr[i])
+        foreach(char c in array[i])
             k++;
         if(k<=3)
         {
-            array[j] = arr[i];
+            newArray[j] = array[i];
             j++;
         }
     }
-    return array;
+    return newArray;
 }
 
 string[] CreateArrayString(int x)
